@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import "./components/variables";
+
+*, *::before, *::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+body {
+    background: linear-gradient(to bottom, $violet, $blue);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: $font;
+    font-size: 12px;
+    animation: zoom-in 1s ease-in-out;
+    main {
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-color: $lightBlue;
+        box-shadow: 0px 10px 50px 1px $primaryColor;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 90%;
+        border-radius: 1.5rem;
+        margin: 10rem 1rem;
+        @media (max-width: 800px) { flex-direction: column; }
+        .mobile {
+            display: none;
+            @media (max-width: 800px) {
+                display: block;
+                min-width: 100%;
+                margin-top: -10rem;
+            }
+            
+        }
+        .images {
+            overflow: hidden;
+            @media (max-width:800px) { display: none; }
+            .desktop {
+                margin-left: -3.5rem;
+            }
+            .box {
+                position: absolute;
+                transform: translateX(-31.8rem) translateY(8rem);
+            }
+        }
+        .faq {
+            max-width: 60%;
+            min-width: 50%;
+            padding: 4rem;
+            @media (max-width: 800px) { 
+                h1 { text-align: center; }
+                max-width: 100%; 
+                padding: 2rem; 
+            }
+            h1 { font-size: 3em; }
+            .content {
+                margin: 1.5rem 0;
+                .title {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    align-items: center;
+                    margin-bottom: .75rem;
+                    h2 {
+                        font-size: 1.4em;
+                        font-weight: 400;
+                        &:hover {
+                            color: $red;
+                            cursor: pointer;
+                            font-weight: 400;
+                        }
+                    }
+                    .up {
+                        transform: rotate(180deg);
+                    }
+                    .active-title {
+                        font-weight: 700;
+                        color: $primaryColor;
+                        &:hover {
+                            font-weight: 700;
+                            color: $primaryColor;
+                        }
+                    }
+                }
+                p {
+                    display: none;
+                    color: $darkBlue700
+                }
+                .active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.attribution { 
+	font-size: .8rem; 
+	text-align: center; 
+	color: $lightBlue;
+    a {
+        color: $darkBlue700;
+        font-weight: 700;
+        text-decoration: none;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}
+@keyframes zoom-in {
+    from {transform: scale(0, 0); opacity: 0} 
+    to {transform: scale(1, 1); opacity: 100%}
+}

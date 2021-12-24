@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  -webkit-animation: zoom-in 1s ease-in-out;
+          animation: zoom-in 1s ease-in-out;
+}
+
+body main {
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-color: #e7e7e9;
+  -webkit-box-shadow: 0px 10px 50px 1px #1d1e35;
+          box-shadow: 0px 10px 50px 1px #1d1e35;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 90%;
+  border-radius: 1.5rem;
+  margin: 10rem 1rem;
+}
+
+@media (max-width: 800px) {
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body main .mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  body main .mobile {
+    display: block;
+    min-width: 100%;
+    margin-top: -10rem;
+  }
+}
+
+body main .images {
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  body main .images {
+    display: none;
+  }
+}
+
+body main .images .desktop {
+  margin-left: -3.5rem;
+}
+
+body main .images .box {
+  position: absolute;
+  -webkit-transform: translateX(-31.8rem) translateY(8rem);
+          transform: translateX(-31.8rem) translateY(8rem);
+}
+
+body main .faq {
+  max-width: 60%;
+  min-width: 50%;
+  padding: 4rem;
+}
+
+@media (max-width: 800px) {
+  body main .faq {
+    max-width: 100%;
+    padding: 2rem;
+  }
+  body main .faq h1 {
+    text-align: center;
+  }
+}
+
+body main .faq h1 {
+  font-size: 3em;
+}
+
+body main .faq .content {
+  margin: 1.5rem 0;
+}
+
+body main .faq .content .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: .75rem;
+}
+
+body main .faq .content .title h2 {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+body main .faq .content .title h2:hover {
+  color: #f47c57;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+body main .faq .content .title .up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body main .faq .content .title .active-title {
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+body main .faq .content .title .active-title:hover {
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+body main .faq .content p {
+  display: none;
+  color: #4a4b5e;
+}
+
+body main .faq .content .active {
+  display: block;
+}
+
+.attribution {
+  font-size: .8rem;
+  text-align: center;
+  color: #e7e7e9;
+}
+
+.attribution a {
+  color: #4a4b5e;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: #1d1e35;
+}
+
+@-webkit-keyframes zoom-in {
+  from {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 100%;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
